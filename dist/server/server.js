@@ -4,12 +4,14 @@ var express = require("express");
 var routes_1 = require("./routes");
 var path = require("path");
 var cookieParser = require("cookie-parser");
+var api_1 = require("./routes/api");
 function loggerMiddleware(request, response, next) {
     console.log(request.method + " " + request.path);
     next();
 }
 var app = express();
 app.use(loggerMiddleware);
+app.use('/api', api_1.defaultApiRoutes);
 app.use('/', routes_1.defaultRoutes);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

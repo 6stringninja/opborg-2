@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+<%- include('../partials/head',data);  %>
+
+<body id="page-top">
+
+
+    <%- include('../partials/nav',data);  %>
+
+    <%- include('../partials/content-start',data);  %>
+    <div class="container-fluid" id="miner-list">
+        <div class="row bg-dark text-white ">
+            <div class="col-1"><i class='fas fa-robot'></i> </div>
+            <div class="col-3">Client</div>
+            <div class="col-3">IP</div>
+            <div class="col-3">Hash</div>
+            <div class="col-1">Temp</div>
+        </div>
+<div id="miner-content"></div>
+    </div>
+
   
-    <%- include('../partials/head',data);  %>
-    <body id="page-top">
+    <% include ../partials/content-end %>
+    <!-- Breadcrumbs-->
 
-       
-        <%- include('../partials/nav',data);  %>
-       
-        <%- include('../partials/content-start',data);  %>
 
-                  <h1>Miners</h1>
-        <% include ../partials/content-end %>
-           <!-- Breadcrumbs-->
- 
-       
-        <% include ../partials/footer %>
+    <% include ../partials/footer %>
 
- 
-        <% include ../partials/scripts %>
-    </body>
+
+    <% include ../partials/scripts %>
+<script src="js/miner.js"></script>
+   
+</body>
 
 </html>

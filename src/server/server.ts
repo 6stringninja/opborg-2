@@ -2,6 +2,7 @@ import * as express from 'express';
 import { defaultRoutes } from './routes';
 import * as path from 'path';
 import * as cookieParser from 'cookie-parser';
+import { defaultApiRoutes } from './routes/api';
 function loggerMiddleware(request: express.Request, response: express.Response, next) {
   console.log(`${request.method} ${request.path}`);
   next();
@@ -10,6 +11,7 @@ function loggerMiddleware(request: express.Request, response: express.Response, 
 const app = express();
  
 app.use(loggerMiddleware);
+app.use('/api', defaultApiRoutes);
 app.use('/', defaultRoutes);
 
 app.set('views', path.join(__dirname, 'views'));
