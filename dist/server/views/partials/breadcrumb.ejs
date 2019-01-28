@@ -1,0 +1,10 @@
+   <!-- Breadcrumbs-->
+   <ol class="breadcrumb">        
+        <% data.breadcrumbs.forEach(function(bc){ %>
+            <li class="breadcrumb-item  <%= (bc.selected===true ? 'selected':'') %>" >  
+                <% if (bc.url) { %> <a href="<%= bc.url %>"><%= bc.title %></a>
+                      <% }else{ %>
+                        <%=bc.title %>
+                        <% } %></li>                
+          <% });%>
+      </ol>  

@@ -1,0 +1,39 @@
+{
+  "name": "opborg-2",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "lint": "tslint -c tslint.json 'src/**/*.ts' --fix",
+    "watch": "tsc  -p src -w",
+    "client": "tsc  -p src\\client -w",
+    "clie": "nodemon dist\\server\\server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/6stringninja/opborg-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/6stringninja/opborg-2/issues"
+  },
+  "homepage": "https://github.com/6stringninja/opborg-2#readme",
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "@types/node": "^10.12.18",
+    "nodemon": "^1.18.9",
+    "typescript": "^3.2.4"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.3",
+    "bootstrap": "^4.2.1",
+    "chart.js": "^2.7.3",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "http-errors": "^1.7.1",
+    "jquery": "^3.3.1",
+    "jquery.easing": "^1.4.1",
+    "morgan": "^1.9.1"
+  }
+}
